@@ -7,3 +7,16 @@ Change class name
 modify class file contents
 Add project reference in Console App
 Build Console App
+
+- Managing memory
+
+2 categories of memory : stack and heap
+stack : faster to work with, but limited in size
+heap : slower but much more pleintiful
+
+object types : class, record and struct => difference is how memory is allocated
+record or class are reference type, only the memory address of the object on the heap
+
+record struct or struct are value type, object allocated on the stack
+
+struct types: Number System.Types, other system types, system.Drawing types
