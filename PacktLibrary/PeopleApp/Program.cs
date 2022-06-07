@@ -31,9 +31,31 @@ static void Harry_Shout(object? sender, EventArgs e)
     Person p = (Person)sender;
     WriteLine($"{p.Name} is this angly : {p.AngerLevel}");  
 }
-harry.Shout = Harry_Shout;
+harry.Shout += Harry_Shout;
 harry.Poke();
 harry.Poke();
 harry.Poke();
 harry.Poke();
 harry.Poke();
+
+// non-generic Lookup collection : depreciated
+System.Collections.Hashtable lookupObject = new();
+
+lookupObject.Add(key: 1, value: "Alpha");
+lookupObject.Add(key: 2, value: "Beta");
+lookupObject.Add(key: 3, value: "Gamma");
+lookupObject.Add(key: harry, value: "Delta");
+
+int key = 2; // lookup the value thaht has 2 as its key
+WriteLine($"key {key} has value : {lookupObject[key]}");
+
+WriteLine($"key {harry} has value : {lookupObject[harry]}"); // no error but problem of type definition
+
+// generic Lookup collection
+Dictionary<int, string> lookupIntString= new Dictionary<int, string>();
+
+lookupIntString.Add(key: 1, value: "Alpha");
+lookupIntString.Add(key: 2, value: "Beta");
+lookupIntString.Add(key: 3, value: "Gamma");
+// lookupIntString.Add(key: harry, value: "Delta"); // convert error
+

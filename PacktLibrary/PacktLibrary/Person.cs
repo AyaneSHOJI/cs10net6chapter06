@@ -60,7 +60,7 @@ public class Person : Object
     }
 
     // delegate field
-    public EventHandler? Shout;
+    public event EventHandler? Shout;
     
     // data field
     public int AngerLevel;
