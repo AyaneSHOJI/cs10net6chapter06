@@ -2,7 +2,7 @@
 
 namespace Packt.Shared;
 
-public class Person : Object
+public class Person : object, IComparable<Person> //comparing objects
 {
     // fields
     public string? Name;
@@ -78,5 +78,11 @@ public class Person : Object
         }
     }
 
+    // implement interface 
+    public int CompareTo(Person? other)
+    {
+        if (Name is null) return 0;
+        return Name.CompareTo(other?.Name);
+    }
 }
 

@@ -5,7 +5,7 @@ Person harry = new() { Name = "Harry" };
 Person mary = new() { Name = "Mary" };
 Person jill = new() { Name = "Jill" };
 
-// call instance method
+// p.223 call instance method
 Person baby1 = mary.ProcreateWith(harry);
 baby1.Name = "Gary";
 
@@ -38,7 +38,7 @@ harry.Poke();
 harry.Poke();
 harry.Poke();
 
-// non-generic Lookup collection : depreciated
+// p.230 non-generic Lookup collection : depreciated
 System.Collections.Hashtable lookupObject = new();
 
 lookupObject.Add(key: 1, value: "Alpha");
@@ -51,11 +51,33 @@ WriteLine($"key {key} has value : {lookupObject[key]}");
 
 WriteLine($"key {harry} has value : {lookupObject[harry]}"); // no error but problem of type definition
 
-// generic Lookup collection
+// p. 231 generic Lookup collection
 Dictionary<int, string> lookupIntString= new Dictionary<int, string>();
 
 lookupIntString.Add(key: 1, value: "Alpha");
 lookupIntString.Add(key: 2, value: "Beta");
 lookupIntString.Add(key: 3, value: "Gamma");
 // lookupIntString.Add(key: harry, value: "Delta"); // convert error
+
+// p.233 implementing interfaces
+Person[] people =
+{
+    new() { Name ="Simon"},
+    new() { Name ="Jenny"},
+    new() { Name ="Adam"},
+    new() { Name ="Richard"},
+};
+
+WriteLine("Inital list of people:");
+foreach (Person p in people)
+{
+    WriteLine($" {p.Name}");
+}
+
+WriteLine("Use Person's IComparable implementation to sort:");
+Array.Sort(people);
+foreach(Person p in people)
+{
+    WriteLine($" {p.Name}");
+}
 
