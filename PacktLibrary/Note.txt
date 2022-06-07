@@ -1,0 +1,9 @@
+- Setting
+
+Make a file
+Add Class lib
+Add Console App
+Change class name
+modify class file contents
+Add project reference in Console App
+Build Console App
