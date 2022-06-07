@@ -58,5 +58,25 @@ public class Person : Object
             return localNumber * localFactorial(localNumber - 1);
         }
     }
+
+    // delegate field
+    public EventHandler? Shout;
+    
+    // data field
+    public int AngerLevel;
+
+    // method
+    public void Poke()
+    {
+        AngerLevel++;
+
+        // if something is listening...
+        if(Shout != null)
+        {
+            // ... then call the delegate
+            Shout(this, EventArgs.Empty);
+        }
+    }
+
 }
 
