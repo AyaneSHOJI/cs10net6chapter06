@@ -16,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonComparer", "PersonCom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPlayable", "IPlayable\IPlayable.csproj", "{4FA811EB-11F6-4FD0-8801-5CAA9D8BF090}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DvdPlayer", "DvdPlayer\DvdPlayer.csproj", "{E9D6682D-1BAB-4BB8-ADC4-F0DD3609B969}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{4FA811EB-11F6-4FD0-8801-5CAA9D8BF090}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FA811EB-11F6-4FD0-8801-5CAA9D8BF090}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FA811EB-11F6-4FD0-8801-5CAA9D8BF090}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9D6682D-1BAB-4BB8-ADC4-F0DD3609B969}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9D6682D-1BAB-4BB8-ADC4-F0DD3609B969}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9D6682D-1BAB-4BB8-ADC4-F0DD3609B969}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9D6682D-1BAB-4BB8-ADC4-F0DD3609B969}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
