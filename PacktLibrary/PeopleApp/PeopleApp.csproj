@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DisplacementVector\DisplacementVector.csproj" />
     <ProjectReference Include="..\PacktLibrary\PacktLibrary.csproj" />
     <ProjectReference Include="..\PersonComparer\PersonComparer.csproj" />
   </ItemGroup>
