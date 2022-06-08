@@ -2,6 +2,23 @@
 using System;
 using Packt.Shared;
 
+// P.251 checking for null in method parameters
+void Hire(Person manager, Person employee)
+{
+    if (manager == null)
+    {
+        throw new ArgumentNullException(nameof(manager));
+    }
+    if (employee == null)
+    {
+        throw new ArgumentNullException(nameof(employee));
+    }
+}
+
+// this can be... with C# 11
+// public void Hire(Person manager!, Person employee!)
+
+
 int thisCannotBeNull = 4;
 // thisCannotBeNull = null; // compile error 
 
@@ -50,5 +67,4 @@ class Address
 //public string City = string.Empty;
 //public string Region = string.Empty;
 
-// P.251 checking for null in method parameters
-public void Hire(PE)
+
