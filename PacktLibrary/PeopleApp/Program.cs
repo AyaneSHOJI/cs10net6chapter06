@@ -121,3 +121,12 @@ aliceInEmployee.WriteToConsole();
 aliceInPerson.WriteToConsole();
 WriteLine(aliceInEmployee.ToString());
 WriteLine(aliceInPerson.ToString());
+
+// p.259 Casting
+Employee explicitAlice = (Employee)aliceInPerson;
+
+if(aliceInPerson is Employee)
+{
+    WriteLine($"{nameof(aliceInPerson)} IS an Employee");
+    Employee exlicitAlice = (Employee)aliceInPerson;
+}

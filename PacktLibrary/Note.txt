@@ -22,3 +22,7 @@ record struct or struct are value type, object allocated on the stack
 struct types: Number System.Types, other system types, system.Drawing types
 
 total bytes used by all the field in type is 16 bytes or less, use struct
+
+- Convert vs. Cast
+Convert : between dismmilar types e.g. text / number
+Cast : between similar types e.g. 16-bit integer / 32-bit integer, superclass / its subclass 
