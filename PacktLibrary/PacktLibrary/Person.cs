@@ -84,5 +84,11 @@ public class Person : object, IComparable<Person> //comparing objects
         if (Name is null) return 0;
         return Name.CompareTo(other?.Name);
     }
+
+    // override method
+    public override string ToString()
+    {
+        return $"{Name} is a {base.ToString()}"; // "base" keyword allows a subclass to access members of its superclass        
+    }
 }
 

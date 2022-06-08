@@ -95,6 +95,7 @@ DisplacementVector dv3 = dv1 + dv2;
 
 WriteLine($"({dv1.X},{dv1.Y}) + ({dv2.X}, {dv2.Y}) = ({dv3.X}, {dv3.Y})");
 
+// p.252 inheriting from classes
 Employee john = new()
 {
     Name = "John Jones",
@@ -102,3 +103,21 @@ Employee john = new()
 };
 
 john.WriteToConsole();
+
+john.EmployeeCode = "JJ001";
+john.HireDate = new(year: 2014, month: 11, day: 23);
+WriteLine($"{john.Name} was hired on {john.HireDate:dd/MM/yy}");
+
+WriteLine(john.ToString());
+
+Employee aliceInEmployee = new()
+{
+    Name = "Alice",
+    EmployeeCode = "AA123"
+};
+
+Person aliceInPerson = aliceInEmployee;
+aliceInEmployee.WriteToConsole();
+aliceInPerson.WriteToConsole();
+WriteLine(aliceInEmployee.ToString());
+WriteLine(aliceInPerson.ToString());
