@@ -1,0 +1,6 @@
+﻿- Settings
+
+create Console App with target framework .Net 5.0
+add "StyleCop.Analyzers" package
+add JSON file add settings
+add 2 itemgroup in project file
