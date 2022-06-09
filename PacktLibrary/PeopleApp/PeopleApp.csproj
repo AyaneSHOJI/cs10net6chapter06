@@ -12,6 +12,7 @@
     <ProjectReference Include="..\Employee\Employee.csproj" />
     <ProjectReference Include="..\PacktLibrary\PacktLibrary.csproj" />
     <ProjectReference Include="..\PersonComparer\PersonComparer.csproj" />
+    <ProjectReference Include="..\StringExtensions\StringExtensions.csproj" />
   </ItemGroup>
 
 </Project>

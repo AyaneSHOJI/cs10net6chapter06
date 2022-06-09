@@ -90,5 +90,18 @@ public class Person : object, IComparable<Person> //comparing objects
     {
         return $"{Name} is a {base.ToString()}"; // "base" keyword allows a subclass to access members of its superclass        
     }
+
+    // p.261 exception
+    public void TimeTravel(DateTime when)
+    {
+        if(when <= DateOfBirth)
+        {
+            throw new PersonException("If you travel back in time to a date earlier than your birth, then the universe will explode! ");
+        }
+        else
+        {
+            WriteLine($"Welcole to {when:yyyy}!");
+        }
+    }
 }
 

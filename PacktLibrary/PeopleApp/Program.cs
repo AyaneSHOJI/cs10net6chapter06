@@ -130,3 +130,32 @@ if(aliceInPerson is Employee)
     WriteLine($"{nameof(aliceInPerson)} IS an Employee");
     Employee exlicitAlice = (Employee)aliceInPerson;
 }
+
+// p.261 exception
+try
+{
+    john.TimeTravel(when: new(1999, 12, 31));
+    john.TimeTravel(when: new(1950, 12, 25));
+}
+catch(PersonException ex)
+{
+    WriteLine(ex.Message);
+}
+
+// p.263 reuse funcitonality
+string email1 = "pamela@test.com";
+string email2 = "ian&test.com";
+//WriteLine("{0} is a valid e-mail address: {1}",
+//    arg0: email1,
+//    arg1: StringExtensions.IsValidEmail(email1));
+//WriteLine("{0} is a valid e-mail address: {1}",
+//    arg0: email2,
+//    arg1: StringExtensions.IsValidEmail(email2));
+
+// simplified version with "static" keyword in class lib
+WriteLine("{0} is a valid e-mail address: {1}",
+    arg0: email1,
+    arg1: email1.IsValidEmail());
+WriteLine("{0} is a valid e-mail address: {1}",
+    arg0: email2,
+    arg1: email2.IsValidEmail());
